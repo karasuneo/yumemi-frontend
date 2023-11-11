@@ -1,0 +1,18 @@
+.label {
+  color: var(--font-color-black);
+  font-size: var(--font-size-label);
+  user-select: none;
+  cursor: pointer;
+
+  & svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5em;
+    vertical-align: sub;
+    fill: none;
+    stroke: var(--font-color-black);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+  }
+}
