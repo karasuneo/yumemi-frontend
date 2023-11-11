@@ -3,7 +3,10 @@ import React from 'react';
 
 import type { Metadata } from 'next';
 
-import './globals.css';
+import './styles/color.scss';
+import './styles/global.scss';
+import './styles/variables.scss';
+import './styles/typography.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 
