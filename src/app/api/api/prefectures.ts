@@ -6,15 +6,14 @@ export async function fetchPrefectures(): Promise<
   const API_URL = process.env.NEXT_PUBLIC_RESAS_API_URL!;
   const API_KEY = process.env.NEXT_PUBLIC_RESAS_API_KEY!;
 
-  const response = await fetch(`${API_URL}/api/v1/prefectures`, {
-    headers: { 'X-API-KEY': API_KEY },
-  });
+  try {
+    const response = await fetch(`${API_URL}/api/v1/prefectures`, {
+      headers: { 'X-API-KEY': API_KEY },
+    });
+    const prefectures: PrefectureResponse = await response.json();
 
-  if (!response) {
+    return prefectures;
+  } catch (e) {
     return undefined;
   }
-
-  const prefectureData: PrefectureResponse = await response.json();
-
-  return prefectureData;
 }
