@@ -1,6 +1,6 @@
 @import '@variables';
 
-.container {
+.checkboxContainer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 10px;
@@ -17,4 +17,9 @@
   @include mq(sm) {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
 }

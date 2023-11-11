@@ -23,18 +23,22 @@ export function SelectPrefecture({ handleChangeSelectedPrefecture }: Props) {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <>
       {!prefectures ? (
-        <Spinner />
+        <div className={styles.spinnerContainer}>
+          <Spinner />
+        </div>
       ) : (
-        prefectures!.result.map((prefecture: Prefecture) => (
-          <CheckBox
-            key={prefecture.prefCode}
-            onChange={handleChangeSelectedPrefecture(prefecture.prefCode)}
-            label={prefecture.prefName}
-          />
-        ))
+        <div className={styles.checkboxContainer}>
+          {prefectures!.result.map((prefecture: Prefecture) => (
+            <CheckBox
+              key={prefecture.prefCode}
+              onChange={handleChangeSelectedPrefecture(prefecture.prefCode)}
+              label={prefecture.prefName}
+            />
+          ))}
+        </div>
       )}
-    </div>
+    </>
   );
 }
