@@ -11,9 +11,9 @@ export async function fetchPopulation(
       `${API_URL}/api/v1/population/composition/perYear?cityCode=-&prefCode=${prefCode}`,
       { headers: { 'X-API-KEY': API_KEY } },
     );
-    const populationResponse: PopulationResponse = await response.json();
+    const population: PopulationResponse = await response.json();
 
-    return populationResponse;
+    return population;
   } catch (e) {
     return undefined;
   }
