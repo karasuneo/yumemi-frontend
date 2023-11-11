@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
+import { CheckBox } from '@/app/ui-domain/CheckBox';
+import { Spinner } from '@/app/ui-domain/Spinner';
 import { usePrefecture } from '@/hooks/usePrefecture';
 import { Prefecture } from '@/types/prefecture';
-import { CheckBox } from '@/ui-domain/CheckBox';
-import { Spinner } from '@/ui-domain/Spinner';
 
 import styles from './style.module.scss';
 
