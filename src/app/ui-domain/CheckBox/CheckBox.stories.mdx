@@ -1,0 +1,17 @@
+import { Meta, Canvas } from '@storybook/addon-docs';
+
+import { CheckBox } from '.';
+
+<Meta title="Design Pattern/CheckBox" />
+
+# CheckBox
+
+なんらかの内容に対して有効 / 無効の選択肢を提示する場合に利用するチェックボックス。
+
+<Canvas>
+  <CheckBox initialState={false} label="Off" />
+</Canvas>
+
+<Canvas>
+  <CheckBox initialState={true} label="On" />
+</Canvas>
