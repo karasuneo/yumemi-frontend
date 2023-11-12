@@ -25,11 +25,9 @@ export function SelectPrefecture({ handleChangeSelectedPrefecture }: Props) {
   return (
     <>
       {!prefectures ? (
-        <div className={styles.spinnerContainer}>
-          <Spinner />
-        </div>
+        <Spinner />
       ) : (
-        <div className={styles.checkboxContainer}>
+        <div className={styles.gridContainer}>
           {prefectures!.result.map((prefecture: Prefecture) => (
             <CheckBox
               key={prefecture.prefCode}
