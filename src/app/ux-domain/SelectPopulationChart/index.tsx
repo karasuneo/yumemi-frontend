@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from 'react';
 
+import { PopulationChartLayout } from './logic-ui/PopulationChart/Layout';
 import { SelectPrefecture } from './logic-ui/SelectPrefecture';
 import styles from './style.module.scss';
 
@@ -30,6 +31,9 @@ export function SelectPopulationChart() {
             handleChangeSelectedPrefecture={handleChangeSelectedPrefecture}
           />
         </div>
+      </section>
+      <section>
+        <PopulationChartLayout prefCodes={prefCodes} />
       </section>
     </>
   );
