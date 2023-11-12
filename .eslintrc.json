@@ -47,7 +47,7 @@
     ],
     "import/extensions": ["error", "never"],
     "import/prefer-default-export": ["off"],
-    "max-len": ["error", 80, { "ignoreTemplateLiterals": true }]
+    "max-len": ["error", 80, { "ignoreTemplateLiterals": true, "ignoreStrings": true }]
   
   },
   "extends": ["next/core-web-vitals", "airbnb-base"],
