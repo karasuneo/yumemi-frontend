@@ -1,0 +1,15 @@
+.button {
+  border: none;
+  outline: none;
+  background: none;
+
+  & svg {
+    opacity: 0.4;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+}

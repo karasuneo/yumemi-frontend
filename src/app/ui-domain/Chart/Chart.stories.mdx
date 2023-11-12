@@ -1,0 +1,34 @@
+import { Meta, Canvas } from '@storybook/addon-docs';
+
+import { Chart } from '.';
+
+<Meta title="Design Pattern/Chart" />
+
+# Chart
+
+描写されるグラフはchart.jsを使用している。
+
+グラフタイトル、x軸のラベル、表示したいデータを元に折れ線グラフを描画する。
+
+また、y軸のラベルはchat.jsによって自動で設定される。
+
+<Canvas>
+  <Chart
+    title="Chart.js Line Chart"
+    labels={['January', 'February', 'March', 'April', 'May', 'June', 'July']}
+    datasets={[
+      {
+        label: 'Dataset 1',
+        data: [-92, -421, 133, 990, 512, -932, 321],
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      {
+        label: 'Dataset 2',
+        data: [8, 142, 2, -983, -321, 843, 120],
+        borderColor: 'rgb(53, 162, 235)',
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      },
+    ]}
+  />
+</Canvas>
