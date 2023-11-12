@@ -25,12 +25,12 @@ ChartJS.register(
 );
 
 type Props = {
-  title: string;
+  title?: string;
   labels: number[] | string[];
   datasets: ChartDataset<'line', number[]>[];
 };
 
-export function Chart({ title, labels, datasets }: Props) {
+export function Chart({ title = '', labels, datasets }: Props) {
   const data: ChartData<'line', number[], number | string> = {
     labels: labels || [],
     datasets: datasets || [],
