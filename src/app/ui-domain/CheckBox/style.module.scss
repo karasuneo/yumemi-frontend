@@ -5,8 +5,8 @@
   cursor: pointer;
 
   & svg {
-    width: 16px;
-    height: 16px;
+    width: var(--checkbox-svg-size);
+    height: var(--checkbox-svg-size);
     margin-right: 0.5em;
     vertical-align: sub;
     fill: none;

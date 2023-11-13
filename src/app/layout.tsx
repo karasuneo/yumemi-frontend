@@ -6,6 +6,7 @@ import { Header } from './ui-domain/Header';
 import type { Metadata } from 'next';
 
 import './styles/svg.scss';
+import './styles/size.scss';
 import './styles/color.scss';
 import './styles/global.scss';
 import './styles/variables.scss';
