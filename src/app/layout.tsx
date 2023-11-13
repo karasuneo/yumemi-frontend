@@ -1,8 +1,12 @@
 import { Inter } from 'next/font/google';
 import React from 'react';
 
+import { Header } from './ui-domain/Header';
+
 import type { Metadata } from 'next';
 
+import './styles/svg.scss';
+import './styles/size.scss';
 import './styles/color.scss';
 import './styles/global.scss';
 import './styles/variables.scss';
@@ -22,7 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

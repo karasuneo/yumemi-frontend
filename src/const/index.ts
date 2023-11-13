@@ -1,3 +1,5 @@
+import { PopulationType } from '@/types/population';
+
 export const POPULATION_TYPE: { [key: string]: string } = {
   none: '',
   total: '総人口',
@@ -12,3 +14,10 @@ export const POPULATION_TYPE_NUM: { [key: string]: number } = {
   working: 2,
   elderly: 3,
 };
+
+export const POPULATION_TYPE_LIST: PopulationType[] = [
+  'total',
+  'under',
+  'working',
+  'elderly',
+];

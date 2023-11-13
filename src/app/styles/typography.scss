@@ -1,6 +1,9 @@
 :root {
-  --font-size-header: 24px;
+  --font-size-title: clamp(1.25rem, 0.977rem + 1.36vw, 2rem);
+  --font-size-header: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+  --font-size-section-title: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
   --font-size-paragraph: 20px;
+  --font-size-card: 16px;
   --font-size-label: 16px;
 
   --font-weight-normal: 400;

@@ -1,0 +1,29 @@
+@use '@variables' as *;
+
+.card {
+  width: 200px;
+  padding: var(--md);
+  background-color: var(--white);
+  opacity: 0.7;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.wrapper {
+  & svg {
+    width: var(--population-svg-size);
+    height: var(--population-svg-size);
+  }
+  & div {
+    font-size: var(--font-size-card);
+    font-weight: var(--font-weight-important);
+  }
+
+  @include mq('md') {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+  }
+}
