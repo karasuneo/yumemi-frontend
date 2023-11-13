@@ -25,7 +25,9 @@ export function SelectPrefecture({ handleChangeSelectedPrefecture }: Props) {
   return (
     <>
       {!prefectures ? (
-        <Spinner />
+        <div className={styles.spinnerContainer}>
+          <Spinner />
+        </div>
       ) : (
         <div className={styles.gridContainer}>
           {prefectures!.result.map((prefecture: Prefecture) => (

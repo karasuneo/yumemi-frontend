@@ -1,11 +1,3 @@
-.overlay {
-  position: fixed;
-  height: 20%;
-  width: 20%;
-  background-color: var(--white);
-  z-index: 999;
-}
-
 .overlayInner {
   position: absolute;
   top: 50%;
