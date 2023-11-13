@@ -56,4 +56,4 @@ export type PopulationNextResponse = {
   populationData: PrefectureNameAndPopulationData[];
 };
 
-export type PopulationType = 'none' | 'total' | 'under' | 'working' | 'elderly';
+export type PopulationType = 'total' | 'under' | 'working' | 'elderly';
