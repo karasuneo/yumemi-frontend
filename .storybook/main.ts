@@ -1,4 +1,7 @@
+import path from 'path';
 
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
+import type { Configuration } from 'webpack';
 import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
@@ -8,7 +11,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
-    '@storybook/addon-styling-webpack'
+    '@storybook/addon-styling-webpack',
   ],
   framework: {
     name: '@storybook/nextjs',
@@ -16,6 +19,18 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag',
+  },
+  webpackFinal(config: Configuration) {
+    config.resolve!.modules = [
+      ...(config.resolve!.modules || []),
+      path.resolve(__dirname, '../src/app/styles/variables.scss'),
+    ];
+
+    config.resolve!.plugins = [
+      ...(config.resolve!.plugins || []),
+      new TsconfigPathsPlugin(),
+    ];
+    return config;
   },
 };
 export default config;
