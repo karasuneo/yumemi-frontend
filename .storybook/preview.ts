@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
 
 import '../src/app/styles/svg.scss';
+import '../src/app/styles/size.scss';
 import '../src/app/styles/color.scss';
 import '../src/app/styles/variables.scss';
 import '../src/app/styles/typography.scss';

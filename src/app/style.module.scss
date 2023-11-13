@@ -1,11 +1,12 @@
 .cardsContainer {
-  margin-top: 12px;
-  padding: 16px;
+  margin-top: var(--sm);
+  padding: var(--md);
   background-color: var(--blue);
   text-align: center;
 }
 
 .title {
+  font-size: var(--font-size-title);
   font-weight: var(--font-weight-important);
   color: var(--white);
 }

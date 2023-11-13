@@ -32,7 +32,7 @@ export function PopulationChartLayout({ prefCodes }: Props) {
         setPopulationType(direction === 'next' ? 'total' : 'working');
         break;
       default:
-        setPopulationType('none');
+        setPopulationType('total');
     }
   };
 
@@ -46,7 +46,7 @@ export function PopulationChartLayout({ prefCodes }: Props) {
 
         <h2 className={styles.chartText}>
           {prefCodes.length === 0 ?
-            '' :
+            '都道府県を選択してください' :
             `${POPULATION_TYPE[populationType]}グラフ`}
         </h2>
 
