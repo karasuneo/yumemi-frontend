@@ -1,0 +1,8 @@
+.container {
+margin-left: 64px;
+
+  & h1 {
+    font-size: var(--font-size-header);
+    color: var(--font-color-black);
+  }
+}
