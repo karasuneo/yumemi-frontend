@@ -2,8 +2,9 @@
 
 import { useCallback, useState } from 'react';
 
-import { PopulationChartLayout } from './logic-ui/PopulationChart/Layout';
-import { SelectPrefectureLayout } from './logic-ui/SelectPrefecture/Layout';
+import { PopulationChart } from './logic-ui/PopulationChart';
+import { SelectPrefecture } from './logic-ui/SelectPrefecture';
+import styles from './style.module.scss';
 
 export function SelectPopulationChart() {
   const [prefCodes, setPrefCodes] = useState<number[]>([]);
@@ -22,12 +23,12 @@ export function SelectPopulationChart() {
   return (
     <>
       <section>
-        <SelectPrefectureLayout
+        <SelectPrefecture
           handleChangeSelectedPrefecture={handleChangeSelectedPrefecture}
         />
       </section>
-      <section>
-        <PopulationChartLayout prefCodes={prefCodes} />
+      <section className={styles.populationChartContainer}>
+        <PopulationChart prefCodes={prefCodes} />
       </section>
     </>
   );

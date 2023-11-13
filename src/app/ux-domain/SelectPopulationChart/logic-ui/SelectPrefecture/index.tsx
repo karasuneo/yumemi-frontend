@@ -24,21 +24,26 @@ export function SelectPrefecture({ handleChangeSelectedPrefecture }: Props) {
 
   return (
     <>
-      {!prefectures ? (
-        <div className={styles.spinnerContainer}>
-          <Spinner />
-        </div>
-      ) : (
-        <div className={styles.gridContainer}>
-          {prefectures!.result.map((prefecture: Prefecture) => (
-            <CheckBox
-              key={prefecture.prefCode}
-              onChange={handleChangeSelectedPrefecture(prefecture.prefCode)}
-              label={prefecture.prefName}
-            />
-          ))}
-        </div>
-      )}
+      <div className={styles.textContainer}>
+        <h2>都道府県を選択</h2>
+      </div>
+      <div className={styles.prefectureContainer}>
+        {!prefectures ? (
+          <div className={styles.spinnerContainer}>
+            <Spinner />
+          </div>
+        ) : (
+          <div className={styles.gridContainer}>
+            {prefectures!.result.map((prefecture: Prefecture) => (
+              <CheckBox
+                key={prefecture.prefCode}
+                onChange={handleChangeSelectedPrefecture(prefecture.prefCode)}
+                label={prefecture.prefName}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </>
   );
 }
