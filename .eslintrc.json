@@ -1,4 +1,7 @@
 {
+  "env": {
+    "jest/globals": true
+  },
   "rules": {
     "operator-linebreak": ["error", "after"],
     "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
@@ -47,6 +50,12 @@
     ],
     "import/extensions": ["error", "never"],
     "import/prefer-default-export": ["off"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
     "max-len": [
       "error",
       80,
