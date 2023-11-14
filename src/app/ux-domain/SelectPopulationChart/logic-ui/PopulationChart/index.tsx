@@ -3,10 +3,10 @@
 import { ChartDataset } from 'chart.js';
 import { useEffect, useState } from 'react';
 
+import { usePopulation } from '@/app/hooks/usePopulation';
 import { ArrowButton } from '@/app/ui-domain/ArrowButton';
 import { Chart } from '@/app/ui-domain/Chart';
 import { POPULATION_TYPE } from '@/const';
-import { usePopulation } from '@/hooks/usePopulation';
 import { PopulationType } from '@/types/population';
 import { getRandomColor } from '@/utils/color';
 
