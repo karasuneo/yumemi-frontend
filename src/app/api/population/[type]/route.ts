@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 import { fetchPrefectures } from '@/app/api/api/prefectures';
-import { convertNextPopulationResponse } from '@/app/api/utils/convert';
+import {
+  convertNextPopulationResponse,
+  sortPopulationNextResponse,
+} from '@/app/api/utils/convert';
 import { PopulationNextResponse } from '@/types/population';
 import { Prefecture } from '@/types/prefecture';
 
@@ -39,6 +42,8 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   if (!populationNextResponse) {
     return NextResponse.json({ error: 'Error' }, { status: 500 });
   }
+
+  sortPopulationNextResponse(populationNextResponse);
 
   return NextResponse.json(populationNextResponse, { status: 200 });
 }

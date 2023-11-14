@@ -56,3 +56,22 @@ export async function convertNextPopulationResponse(
 
   return populationNextResponse;
 }
+
+export function sortPopulationNextResponse(
+  populationNextResponse: PopulationNextResponse,
+) {
+  populationNextResponse.populationData.sort((a, b) => {
+    const nameA = a.prefName.toUpperCase();
+    const nameB = b.prefName.toUpperCase();
+
+    if (nameA < nameB) {
+      return -1;
+    }
+
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    return 0;
+  });
+}
