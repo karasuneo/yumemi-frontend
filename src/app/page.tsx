@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <div className={styles.cardsContainer}>
-        <h1 className={styles.title}>種類別人口構成グラフ表示</h1>
+        <h2 className={styles.title}>種類別人口構成グラフ表示</h2>
         <PopulationCards />
       </div>
       <SelectPopulationChart />
