@@ -1,4 +1,6 @@
 # ゆめみフロントエンドコーディングテスト
+### デプロイ先URL
+https://yumemi-frontend-peach.vercel.app/
 
 ## 実行方法
 
