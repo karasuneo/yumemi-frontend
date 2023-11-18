@@ -55,7 +55,9 @@ export function Card({ icon }: Props) {
     <div className={styles.card}>
       <div className={styles.wrapper}>
         <div>{getSvgByIcon[icon]}</div>
-        <div>{getParagraphByIcon[icon]}</div>
+        <div>
+          <p>{getParagraphByIcon[icon]}</p>
+        </div>
       </div>
     </div>
   );
