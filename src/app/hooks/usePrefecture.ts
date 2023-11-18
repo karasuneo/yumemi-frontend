@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-import { fetchPrefectures } from '@/api/prefectures';
+import { fetchPrefectures } from '@/fetcher/prefectures';
 import { PrefectureNextResponse } from '@/types/prefecture';
 
 export const usePrefecture = () => {

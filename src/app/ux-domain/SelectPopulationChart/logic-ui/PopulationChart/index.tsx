@@ -3,10 +3,10 @@
 import { ChartDataset } from 'chart.js';
 import { useEffect, useState } from 'react';
 
+import { usePopulation } from '@/app/hooks/usePopulation';
 import { ArrowButton } from '@/app/ui-domain/ArrowButton';
 import { Chart } from '@/app/ui-domain/Chart';
 import { POPULATION_TYPE } from '@/const';
-import { usePopulation } from '@/hooks/usePopulation';
 import { PopulationType } from '@/types/population';
 import { getRandomColor } from '@/utils/color';
 
@@ -71,11 +71,11 @@ export function PopulationChart({ prefCodes }: Props) {
           direction="left"
           onClick={() => handleChangePopulationType('prev')}
         />
-        <h2 className={styles.chartText}>
+        <h3 className={styles.chartText}>
           {prefCodes.length === 0 ?
             '都道府県を選択してください' :
             `${POPULATION_TYPE[populationType]}グラフ`}
-        </h2>
+        </h3>
         <ArrowButton
           direction="right"
           onClick={() => handleChangePopulationType('next')}

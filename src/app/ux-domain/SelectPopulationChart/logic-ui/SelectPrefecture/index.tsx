@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
+import { usePrefecture } from '@/app/hooks/usePrefecture';
 import { CheckBox } from '@/app/ui-domain/CheckBox';
 import { Spinner } from '@/app/ui-domain/Spinner';
-import { usePrefecture } from '@/hooks/usePrefecture';
 import { Prefecture } from '@/types/prefecture';
 
 import styles from './style.module.scss';
@@ -25,7 +25,7 @@ export function SelectPrefecture({ handleChangeSelectedPrefecture }: Props) {
   return (
     <>
       <div className={styles.textContainer}>
-        <h2>都道府県を選択</h2>
+        <h3>都道府県を選択</h3>
       </div>
       <div className={styles.prefectureContainer}>
         {!prefectures ? (

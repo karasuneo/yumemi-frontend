@@ -15,9 +15,10 @@
     width: var(--population-svg-size);
     height: var(--population-svg-size);
   }
-  & div {
+  & p {
     font-size: var(--font-size-card);
     font-weight: var(--font-weight-important);
+    margin: 0;
   }
 
   @include mq('md') {

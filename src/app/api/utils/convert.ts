@@ -2,7 +2,7 @@ import { POPULATION_TYPE_NUM } from '@/const';
 import { PopulationNextResponse } from '@/types/population';
 import { Prefecture, PrefectureResponse } from '@/types/prefecture';
 
-import { fetchPopulation } from '../api/population';
+import { fetchPopulation } from '../fetcher/population';
 
 export async function convertNextPopulationResponse(
   type: string,
@@ -55,4 +55,23 @@ export async function convertNextPopulationResponse(
   }
 
   return populationNextResponse;
+}
+
+export function sortPopulationNextResponse(
+  populationNextResponse: PopulationNextResponse,
+) {
+  populationNextResponse.populationData.sort((a, b) => {
+    const nameA = a.prefName.toUpperCase();
+    const nameB = b.prefName.toUpperCase();
+
+    if (nameA < nameB) {
+      return -1;
+    }
+
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    return 0;
+  });
 }

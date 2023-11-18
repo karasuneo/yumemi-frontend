@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-import { fetchPopulation } from '@/api/population';
+import { fetchPopulation } from '@/fetcher/population';
 import { PopulationNextResponse, PopulationType } from '@/types/population';
 
 type Props = {
