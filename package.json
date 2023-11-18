@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "test": "jest",
+    "test": "jest && playwright test",
     "build": "next build",
-    "start": "next start",
+    "start": "next build && next start",
     "lint": "next lint",
     "format": "prettier --write src",
     "prepare": "husky install",
@@ -26,6 +26,7 @@
     ]
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.0",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
