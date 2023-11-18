@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next build && next start",
     "lint": "next lint",
-    "format": "prettier --write src",
+    "format": "prettier --write src && eslint --fix src",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

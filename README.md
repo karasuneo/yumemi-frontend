@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ゆめみフロントエンドコーディングテスト
 
-## Getting Started
+## 実行方法
 
-First, run the development server:
+### 環境変数を設定
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`NEXT_PUBLIC_RESAS_API_URL`と`NEXT_PUBLIC_RESAS_API_URL`は[RESAS API](https://opendata.resas-portal.go.jp/)から取得したキーをコピペしてください
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### サーバーを起動
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+# モジュールのインストール
+npm install
 
-## Learn More
+# 開発者サーバーの起動
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+http://localhost:3000/ にアクセスする
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## テストの実行方法
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+今回はJestとPlaywrightを使用してテストを実行しています
 
-## Deploy on Vercel
+```bash
+# テストの実行
+npm run test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Storybookサーバーの起動方法
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+# Storybookサーバーの起動
+npm run storybook
+```
+
+http://localhost:6006/ にアクセスする
+
+## フォーマッターの実行方法
+
+`prettier --write src && eslint --fix src`を実行します
+
+```bash
+# フォーマッターの実行
+npm run format
+```
+
+## 開発の際の注意点
+
+コミット時、ハスキーによってフォーマッターが実行されます
+以下のパスを通すようにしてください
+
+```bash
+# パスを通す
+export PATH=$PATH:./node_modules/.bin
+```
