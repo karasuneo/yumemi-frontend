@@ -1,5 +1,4 @@
-# アクション名
-name: Jest
+name: Jest & Playwright
 
 # タイミングを指定
 on:
@@ -20,8 +19,11 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
       - name: Install packages
         run: npm install
+      - name: Set up Playwright
+        run: npx playwright install  
       - name: Show coverage
-        run: npm test -- --bail --maxWorkers=100% --watchAll=false --coverage
+        run: npm run test --maxWorkers=100% --watchAll=false --coverage
         env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
           NEXT_PUBLIC_RESAS_API_URL: ${{ secrets.NEXT_PUBLIC_RESAS_API_URL }}
           NEXT_PUBLIC_RESAS_API_KEY: ${{ secrets.NEXT_PUBLIC_RESAS_API_KEY }}

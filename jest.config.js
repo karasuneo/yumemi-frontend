@@ -7,6 +7,7 @@ const createJestConfig = nextJest({
 /** @type {import('jest').Config} */
 const customJestConfig = {
   moduleDirectories: ['node_modules', '<rootDir>/'],
+  testPathIgnorePatterns: ['/node_modules/', '<rootDir>/src/__test__/e2e'],
 };
 
 module.exports = createJestConfig(customJestConfig);
