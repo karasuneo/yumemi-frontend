@@ -19,6 +19,8 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
       - name: Install packages
         run: npm install
+      - name: Set up Playwright
+        run: npx playwright install  
       - name: Show coverage
         run: npm run test --maxWorkers=100% --watchAll=false --coverage
         env:
