@@ -48,3 +48,13 @@ http://localhost:6006/ にアクセスする
 # フォーマッターの実行
 npm run format
 ```
+
+## 開発の際の注意点
+
+コミット時、ハスキーによってフォーマッターが実行されます
+以下のパスを通すようにしてください
+
+```bash
+# パスを通す
+export PATH=$PATH:./node_modules/.bin
+```
