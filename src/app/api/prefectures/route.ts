@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 import { PrefectureNextResponse } from '@/types/prefecture';
 
-import { fetchPrefectures } from '../api/prefectures';
+import { fetchPrefectures } from '../fetcher/prefectures';
 
 export async function GET(): Promise<NextResponse> {
   const prefectures = await fetchPrefectures();
