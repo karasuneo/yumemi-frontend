@@ -2,7 +2,7 @@ import { POPULATION_TYPE_NUM } from '@/const';
 import { PopulationNextResponse } from '@/types/population';
 import { Prefecture, PrefectureResponse } from '@/types/prefecture';
 
-import { fetchPopulation } from '../api/population';
+import { fetchPopulation } from '../fetcher/population';
 
 export async function convertNextPopulationResponse(
   type: string,

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import { fetchPrefectures } from '@/app/api/api/prefectures';
+import { fetchPrefectures } from '@/app/api/fetcher/prefectures';
 import {
   convertNextPopulationResponse,
   sortPopulationNextResponse,
