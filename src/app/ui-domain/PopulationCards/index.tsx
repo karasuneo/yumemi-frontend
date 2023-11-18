@@ -1,4 +1,4 @@
-import { POPULATION_TYPE_LIST } from '@/const';
+import { POPULATION_TYPE_LIST } from '@/const/population';
 
 import { Card } from './Card';
 import styles from './style.module.scss';
