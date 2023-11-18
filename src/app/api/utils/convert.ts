@@ -1,4 +1,4 @@
-import { POPULATION_TYPE_NUM } from '@/const';
+import { POPULATION_TYPE_NUM } from '@/const/population';
 import { PopulationNextResponse } from '@/types/population';
 import { Prefecture, PrefectureResponse } from '@/types/prefecture';
 
