@@ -71,11 +71,11 @@ export function PopulationChart({ prefCodes }: Props) {
           direction="left"
           onClick={() => handleChangePopulationType('prev')}
         />
-        <h2 className={styles.chartText}>
+        <h3 className={styles.chartText}>
           {prefCodes.length === 0 ?
             '都道府県を選択してください' :
             `${POPULATION_TYPE[populationType]}グラフ`}
-        </h2>
+        </h3>
         <ArrowButton
           direction="right"
           onClick={() => handleChangePopulationType('next')}

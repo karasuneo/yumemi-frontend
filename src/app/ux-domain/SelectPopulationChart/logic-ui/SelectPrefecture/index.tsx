@@ -25,7 +25,7 @@ export function SelectPrefecture({ handleChangeSelectedPrefecture }: Props) {
   return (
     <>
       <div className={styles.textContainer}>
-        <h2>都道府県を選択</h2>
+        <h3>都道府県を選択</h3>
       </div>
       <div className={styles.prefectureContainer}>
         {!prefectures ? (
