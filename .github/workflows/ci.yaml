@@ -22,6 +22,6 @@ jobs:
       - name: Show coverage
         run: npm run test --maxWorkers=100% --watchAll=false --coverage
         env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
           NEXT_PUBLIC_RESAS_API_URL: ${{ secrets.NEXT_PUBLIC_RESAS_API_URL }}
           NEXT_PUBLIC_RESAS_API_KEY: ${{ secrets.NEXT_PUBLIC_RESAS_API_KEY }}
-      
