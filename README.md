@@ -4,6 +4,15 @@
 
 https://yumemi-frontend-peach.vercel.app/
 
+### ディレクトリ構成の説明
+
+https://github.com/karasuneo/yumemi-frontend/blob/dev/src/README.md
+
+### 動作環境
+
+| node.js | v20.5.1 |
+| ------- | ------- |
+
 ## 実行方法
 
 ### 環境変数を設定

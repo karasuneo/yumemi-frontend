@@ -6,13 +6,8 @@
 .
 ├── __test__
 │   ├── api
-│   │   ├── populationRoute.test.ts
-│   │   └── prefecturesRoute.test.ts
 │   ├── const
-│   │   ├── population.ts
-│   │   └── prefectures.ts
 │   └── e2e
-│       └── index.spec.ts
 ├── app
 │   ├── api
 │   │   ├── fetcher
@@ -31,7 +26,6 @@
 │   │   └── Spinner
 │   └── ux-domain
 │       └── SelectPopulationChart
-│           ├── index.tsx
 │           └── logic-ui
 │               ├── PopulationChart
 │               └── SelectPrefecture
